@@ -12,6 +12,7 @@ class  ViewController: UIViewController {
 
     
     @IBOutlet weak var messageLabrl: UILabel!
+    @IBOutlet weak var newLabel: UILabel!
     @IBOutlet weak var enterNameTextField: UITextField!
     @IBOutlet weak var enterMessageTextField: UITextField!
     @IBOutlet weak var mailButton: UIButton!
@@ -33,12 +34,22 @@ class  ViewController: UIViewController {
         messageLabrl.hidden = false
         messageLabrl.text = enterMessageTextField.text
         messageLabrl.textColor = UIColor.redColor()
+        
+        newLabel.hidden = false
+        newLabel.text = enterNameTextField.text
+        newLabel.textColor = UIColor.blueColor()
+        enterNameTextField.text = "";
+        enterNameTextField.resignFirstResponder()
+        
+        
         enterMessageTextField.text = ""
         enterMessageTextField.resignFirstResponder() // kbrd go away
         
         mailButton.setTitle("Mail Sent", forState: UIControlState.Normal)
         
-        // checking commits
+        
+        
+        // checking commits dsa
         
         
         
